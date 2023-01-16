@@ -5,4 +5,4 @@
 [Link del modelo](https://drive.google.com/file/d/1_VptWwTI1YwK6NqEzjqvSOe6rDog6Tc4/view?usp=sharing)
 
 
-![Imagen modelado](https://github.com/seb4stian69/RetoBackendSemanaUno/blob/main/Photos/DiagramaDDDRetoSemanaUno-Modelado%20-%20%5BTienda%5D.jpg)
+![Imagen modelado](https://github.com/seb4stian69/RetoBackendSemanaUno/blob/main/Photos/DiagramaDDDRetoSemanaUno-Modelado%20-%20%5BTienda%5D.png)
