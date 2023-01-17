@@ -20,9 +20,9 @@ public class ProductPurchased extends DomainEvent {
         super("shop.productPurchased");
     }
 
-    public ProductPurchased(Instant date, String idType, String id, String clientName,Map<String, Integer> products){
+    public ProductPurchased(String idType, String id, String clientName,Map<String, Integer> products){
         super("shop.productPurchased");
-        this.date = date;
+        this.date = Instant.now();
         this.idType = idType;
         this.id = id;
         this.clientName = clientName;
