@@ -1,7 +1,7 @@
 package com.sofka.shop.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.shop.values.ProductID;
+import com.sofka.shop.values.IDProduct;
 import com.sofka.shop.values.ShopID;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,9 +10,9 @@ import lombok.Setter;
 public class ProductDeleted extends DomainEvent {
 
     private ShopID shopID;
-    private ProductID productId;
+    private IDProduct productId;
 
-    public ProductDeleted(ShopID shopID, ProductID productId) {
+    public ProductDeleted(ShopID shopID, IDProduct productId) {
         super("shop.productDeleted");
         this.shopID = shopID;
         this.productId = productId;
