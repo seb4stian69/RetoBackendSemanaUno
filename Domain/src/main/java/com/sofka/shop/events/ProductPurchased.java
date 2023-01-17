@@ -2,8 +2,7 @@ package com.sofka.shop.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.shop.values.CName;
-import com.sofka.shop.values.PName;
-import com.sofka.shop.values.Price;
+import com.sofka.shop.values.IDProduct;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,9 +16,9 @@ public class ProductPurchased extends DomainEvent {
     private String idType;
     private String id;
     private CName clientName;
-    private Map<PName, Price> products;
+    private Map<IDProduct, Integer> products;
 
-    public ProductPurchased(String idType, String id, CName clientName,Map<PName, Price> products){
+    public ProductPurchased(String idType, String id, CName clientName,Map<IDProduct, Integer> products){
         super("shop.productPurchased");
         this.date = Instant.now();
         this.idType = idType;
