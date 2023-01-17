@@ -1,6 +1,7 @@
 package com.sofka.shop.entities;
 
 import co.com.sofka.domain.generic.Entity;
+import com.sofka.shop.utils.EncapsulateProduct;
 import com.sofka.shop.values.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +26,15 @@ public class Product extends Entity<IDProduct> {
         this.max = max;
         this.min = min;
         this.price = price;
+    }
+
+    public void updateClass(EncapsulateProduct product){
+        this.name = product.getProductName();
+        this.inInventory = product.getInInventory();
+        this.isEnabled = product.getIsEnabled();
+        this.max = product.getMax();
+        this.min = product.getMin();
+        this.price = product.getPrice();
     }
 
 }
