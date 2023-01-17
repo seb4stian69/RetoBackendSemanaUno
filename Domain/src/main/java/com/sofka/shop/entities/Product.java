@@ -13,14 +13,16 @@ public class Product extends Entity<IDProduct> {
     private Enable isEnabled;
     private final Max max;
     private final Min min;
+    private final Price price;
 
-    public Product(IDProduct id, PName name, InInventory inInventory, Enable isEnabled, Max max, Min min) {
+    public Product(IDProduct id, PName name, InInventory inInventory, Enable isEnabled, Max max, Min min, Price price) {
         super(id);
         this.name = name;
         this.inInventory = inInventory;
         this.isEnabled = isEnabled;
         this.max = max;
         this.min = min;
+        this.price = price;
     }
 
 }
