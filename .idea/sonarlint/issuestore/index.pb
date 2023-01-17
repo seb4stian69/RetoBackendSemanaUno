@@ -7,8 +7,6 @@ C
 Application/pom.xml,a\e\ae5060fc861c6c8b8bcd1fabe836651aa0ddd33c
 >
 Domain/pom.xml,7\b\7b5618abb8c700551796d73e955c31021b47e2f0
-k
-;Domain/src/main/java/com/sofka/shop/values/InInventory.java,7\0\70eabd36b7f1b9b60b0b1958db6f95f926bd481b
 c
 3Domain/src/main/java/com/sofka/shop/values/Max.java,2\d\2d28638767b21f5146f2fb52b14e89bd5a872269
 h
@@ -39,8 +37,6 @@ n
 >Domain/src/main/java/com/sofka/shop/events/ProductDeleted.java,b\8\b8b0c2f377711dd01a2d52052cc94be970fcb623
 f
 6Domain/src/main/java/com/sofka/shop/values/Enable.java,9\c\9cf2d09bfa30ac533ec6d5523369b88462a19461
-i
-9Domain/src/main/java/com/sofka/shop/entities/Product.java,8\a\8a243aca6e43ea9b9dedd41af13464ee11a38fb6
 q
 ADomain/src/main/java/com/sofka/shop/utils/EncapsulateProduct.java,b\d\bd4523500f165b2017d1f9afe7b22b8d10c482a0
 m
