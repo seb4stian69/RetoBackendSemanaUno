@@ -2,7 +2,10 @@ package com.sofka.shop.entities;
 
 import co.com.sofka.domain.generic.Entity;
 import com.sofka.shop.values.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter/* */@Setter
 public class Product extends Entity<IDProduct> {
 
     private final PName name;
