@@ -13,18 +13,20 @@ public class ProductRegistered extends DomainEvent {
     private Enable enabled;
     private Max max;
     private Min min;
+    private Price price;
 
     public ProductRegistered(){
         super("shop.productregistered");
     }
 
-    public ProductRegistered(PName name, InInventory inINventory, Enable enabled, Max max, Min min){
+    public ProductRegistered(PName name, InInventory inINventory, Enable enabled, Max max, Min min, Price price){
         super("shop.productregistered");
         this.name = name;
         this.inINventory = inINventory;
         this.enabled = enabled;
         this.max = max;
         this.min = min;
+        this.price = price;
     }
 
 }
