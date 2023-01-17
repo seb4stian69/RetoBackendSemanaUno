@@ -9,12 +9,12 @@ import lombok.Setter;
 public class Product extends Entity<IDProduct> {
 
     private final IDProduct productID;
-    private final PName name;
+    private PName name;
     private InInventory inInventory;
     private Enable isEnabled;
-    private final Max max;
-    private final Min min;
-    private final Price price;
+    private Max max;
+    private Min min;
+    private Price price;
 
     public Product(IDProduct id, PName name, InInventory inInventory, Enable isEnabled, Max max, Min min, Price price) {
         super(id);
