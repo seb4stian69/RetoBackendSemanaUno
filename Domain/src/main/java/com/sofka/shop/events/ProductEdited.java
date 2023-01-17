@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter/* */@Setter
 public class ProductEdited extends DomainEvent {
 
-    private ProductID productID;
+    private IDProduct productID;
     private PName name;
     private InInventory inINventory;
     private Enable enabled;
@@ -16,7 +16,7 @@ public class ProductEdited extends DomainEvent {
     private Min min;
     private Price price;
 
-    public ProductEdited(ProductID productID, PName name, InInventory inINventory, Enable enabled, Max max, Min min, Price price) {
+    public ProductEdited(IDProduct productID, PName name, InInventory inINventory, Enable enabled, Max max, Min min, Price price) {
         super("shop.productEdited");
         this.productID = productID;
         this.name = name;
