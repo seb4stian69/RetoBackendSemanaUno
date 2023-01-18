@@ -27,14 +27,16 @@ public class Shop extends AggregateEvent<ShopID> {
 
     // + ------------------------     Constructor     ------------------------ + //
 
-    public Shop(ShopID entityId) {
+    public Shop(ShopID entityId, List<Product> products) {
         super(entityId);
+        this.products = products;
+        this.productsPurchased = new ArrayList<>();
         subscribe(new ShopChange(this));
         appendChange(new ShopCreated(products)).apply();
     }
 
-    public static Shop from(ShopID entityId, List<DomainEvent> events){
-        var shop = new Shop(entityId);
+    public static Shop from(ShopID entityId,List<Product> products ,List<DomainEvent> events){
+        var shop = new Shop(entityId,products);
         events.forEach(shop::applyEvent);
         return shop;
     }
