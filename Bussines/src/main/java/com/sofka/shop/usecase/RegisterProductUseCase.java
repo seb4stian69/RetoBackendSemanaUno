@@ -7,14 +7,16 @@ import com.sofka.shop.entities.Product;
 import com.sofka.shop.gateway.ShopDomainEventRepository;
 import com.sofka.shop.generic.UseCaseForCommand;
 import com.sofka.shop.values.*;
+import lombok.NoArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@NoArgsConstructor
 public class RegisterProductUseCase extends UseCaseForCommand<RegisterProduct> {
 
     // + ------------------------         Utils         ------------------------ + //
 
-    private final ShopDomainEventRepository repository;
+    private ShopDomainEventRepository repository;
 
     // + ------------------------      Constructor       ------------------------ + //
 

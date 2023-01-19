@@ -1,6 +1,4 @@
 
-C
-Application/pom.xml,a\e\ae5060fc861c6c8b8bcd1fabe836651aa0ddd33c
 c
 3Domain/src/main/java/com/sofka/shop/values/Max.java,2\d\2d28638767b21f5146f2fb52b14e89bd5a872269
 h
@@ -21,3 +19,18 @@ n
 >Domain/src/main/java/com/sofka/shop/events/ProductDeleted.java,b\8\b8b0c2f377711dd01a2d52052cc94be970fcb623
 f
 6Domain/src/main/java/com/sofka/shop/values/Enable.java,9\c\9cf2d09bfa30ac533ec6d5523369b88462a19461
+x
+HBussines/src/test/java/com/sofka/shop/usecase/CreateShopUseCaseTest.java,7\8\78bec7186ddc45b7bcca1d2f279bd31165a7057b
+y
+IBussines/src/test/java/com/sofka/shop/usecase/EditProductUseCaseTest.java,5\6\569507f56e0a84b855f8812fe99d30eaba1fdf3a
+{
+KBussines/src/test/java/com/sofka/shop/usecase/DeleteProductUseCaseTest.java,b\1\b11191e77a92ce2231c66cf11160c249b042b861
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+Q
+!Application/AppService/.gitignore,3\3\33fe77327a3b6ef4cb575ace0f2b85dbf18239fa
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Ž
+^Application/AppService/src/test/java/com/sofka/shop/appservice/AppServiceApplicationTests.java,6\f\6ff02ffb542a8685a3cb2059d85f1896b0e28686
