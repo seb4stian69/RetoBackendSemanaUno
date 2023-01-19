@@ -26,6 +26,7 @@ import java.util.Map;
 
 public class BuyProduct extends Command {
 
+    private String shopID;
     private Instant date;
     private String idType;
     private String id;
