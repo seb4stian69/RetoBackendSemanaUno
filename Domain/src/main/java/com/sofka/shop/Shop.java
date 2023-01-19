@@ -7,10 +7,13 @@ import com.sofka.shop.events.*;
 import com.sofka.shop.utils.ShopUtils;
 import com.sofka.shop.values.*;
 import com.sofka.shop.values.UUID;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.*;
 import java.util.Map;
 
+@Getter/**/@Setter
 public class Shop extends AggregateEvent<ShopID> {
 
     // + ------------------------      Atributes      ------------------------ + //
@@ -21,7 +24,7 @@ public class Shop extends AggregateEvent<ShopID> {
 
     protected String clientID;
     protected String clientName;
-    protected List<String> productsPurchased;
+    protected List<String> productsPurchased = new ArrayList<String>();
     protected Integer total;
 
 
@@ -35,8 +38,13 @@ public class Shop extends AggregateEvent<ShopID> {
         appendChange(new ShopCreated(products)).apply();
     }
 
-    public static Shop from(ShopID entityId,List<Product> products ,List<DomainEvent> events){
-        var shop = new Shop(entityId,products);
+    public Shop(ShopID entityId) {
+        super(entityId);
+        subscribe(new ShopChange(this));
+    }
+
+    public static Shop from(ShopID entityId,List<DomainEvent> events){
+        var shop = new Shop(entityId);
         events.forEach(shop::applyEvent);
         return shop;
     }
