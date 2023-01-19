@@ -2,6 +2,7 @@ package com.sofka.shop.utils;
 
 import com.sofka.shop.entities.Product;
 import com.sofka.shop.values.IDProduct;
+import com.sofka.shop.values.InInventory;
 
 import java.util.List;
 
@@ -10,11 +11,21 @@ public class ShopUtils {
     public ShopUtils() {/*void*/}
 
     public Product findProductById(IDProduct id, List<Product> products) {
-
         return products.stream()
                 .filter( product -> id.equals(product.getProductID()) )
                 .findFirst()
                 .orElse(null);
+    }
+
+    public void subtractProduct(IDProduct id, List<Product> products, Integer quantity) {
+
+        var product = findProductById(id, products);
+
+        if(product.getInInventory().value() < quantity) {
+            throw new IllegalArgumentException("You try to buy more products than are currently available");
+        }else{
+            product.setInInventory(InInventory.of( product.getInInventory().value() - quantity ));
+        }
 
     }
 
@@ -51,11 +62,11 @@ public class ShopUtils {
     }
 
     public String joinUUID(String typeID, String id){
-        return new StringBuilder().append(typeID).append("-").append(id).toString();
+        return typeID + "-" + id;
     }
 
     public String joinClientName(String name, String lastname){
-        return new StringBuilder().append(name).append(" ").append(lastname).toString();
+        return name + " " + lastname;
     }
 
     public void detectedProblems(IDProduct idProduct, Integer quantity, List<Product> products){
