@@ -11,7 +11,7 @@ public class ShopChange extends EventChange {
     public ShopChange(Shop shop) {
 
         apply((ShopCreated event)->{
-           shop.products = event.getProducts();
+            shop.products = event.getProducts();
         });
 
         apply((ProductRegistered event) ->
