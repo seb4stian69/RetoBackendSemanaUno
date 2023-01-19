@@ -19,10 +19,6 @@ m
 =Domain/src/main/java/com/sofka/shop/commands/EditProduct.java,e\c\ec8f04337b233d1b124633b0de71f559db0265c4
 q
 ADomain/src/main/java/com/sofka/shop/commands/RegisterProduct.java,f\3\f31c3d75783f6e64fea744021b608725e67ccf70
-o
-?Domain/src/main/java/com/sofka/shop/commands/DeleteProduct.java,c\f\cf3631234870bffe9330ab4ae16abbdbacf44010
-n
->Domain/src/main/java/com/sofka/shop/events/ProductDeleted.java,b\8\b8b0c2f377711dd01a2d52052cc94be970fcb623
 f
 6Domain/src/main/java/com/sofka/shop/values/Enable.java,9\c\9cf2d09bfa30ac533ec6d5523369b88462a19461
 q
