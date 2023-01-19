@@ -1,12 +1,14 @@
 package com.sofka.shop.commands;
 
 import co.com.sofka.domain.generic.Command;
+import com.sofka.shop.values.IDProduct;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.util.HashMap;
 import java.util.Map;
 
 @Getter/* */@Setter
@@ -31,7 +33,7 @@ public class BuyProduct extends Command {
     private String idType;
     private String id;
     private String clientName;
-    private Map<String, Integer> products;
+    private Map<String, Integer> products = new HashMap<String, Integer>();
 
     public BuyProduct(String idType, String id, String clientName, Map<String, Integer> products) {
         this.date = Instant.now();

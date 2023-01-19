@@ -62,11 +62,11 @@ public class ShopUtils {
     }
 
     public String joinUUID(String typeID, String id){
-        return new StringBuilder().append(typeID).append("-").append(id).toString();
+        return typeID + "-" + id;
     }
 
     public String joinClientName(String name, String lastname){
-        return new StringBuilder().append(name).append(" ").append(lastname).toString();
+        return name + " " + lastname;
     }
 
     public void detectedProblems(IDProduct idProduct, Integer quantity, List<Product> products){
