@@ -1,12 +1,6 @@
 
-@
-Bussines/pom.xml,6\e\6ee31209d496cf483f07a3bcece4776b8225efc1
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 C
 Application/pom.xml,a\e\ae5060fc861c6c8b8bcd1fabe836651aa0ddd33c
->
-Domain/pom.xml,7\b\7b5618abb8c700551796d73e955c31021b47e2f0
 c
 3Domain/src/main/java/com/sofka/shop/values/Max.java,2\d\2d28638767b21f5146f2fb52b14e89bd5a872269
 h
@@ -15,8 +9,6 @@ c
 3Domain/src/main/java/com/sofka/shop/values/Min.java,d\3\d3fa8fac6f4d091b6cb9071da492783a8513dbb3
 e
 5Domain/src/main/java/com/sofka/shop/values/PName.java,d\8\d8853b902070c19ac9d06497ce12760bd9732ccc
-d
-4Domain/src/main/java/com/sofka/shop/values/UUID.java,b\4\b4de1703e98f7144e93b1d301c4f1a26ef4f4f58
 f
 6Domain/src/main/java/com/sofka/shop/values/ShopID.java,a\0\a0dc61a7daff4dae187b45936253bf25cd1fb57a
 i
@@ -31,8 +23,6 @@ q
 ADomain/src/main/java/com/sofka/shop/commands/RegisterProduct.java,f\3\f31c3d75783f6e64fea744021b608725e67ccf70
 o
 ?Domain/src/main/java/com/sofka/shop/commands/DeleteProduct.java,c\f\cf3631234870bffe9330ab4ae16abbdbacf44010
-k
-;Domain/src/main/java/com/sofka/shop/events/ShopCreated.java,9\5\95ebf81dfda31611e68a113fba7b6f1cd7755ebb
 n
 >Domain/src/main/java/com/sofka/shop/events/ProductDeleted.java,b\8\b8b0c2f377711dd01a2d52052cc94be970fcb623
 f
