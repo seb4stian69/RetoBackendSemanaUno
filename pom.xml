@@ -11,7 +11,6 @@
     <modules>
         <module>Domain</module>
         <module>Bussines</module>
-        <module>Application</module>
     </modules>
 
     <properties>
