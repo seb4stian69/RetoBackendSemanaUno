@@ -60,7 +60,7 @@ public class Shop extends AggregateEvent<ShopID> {
 
     }
 
-    public void editProduct(String productID, String name, Integer inINventory, Boolean enabled, Integer max, Integer min, Integer price){
+    public void editProduct(String shopID, String productID, String name, Integer inINventory, Boolean enabled, Integer max, Integer min, Integer price){
 
         Objects.requireNonNull(name, "Name is null, to edit a product is need the last or new data related with the same");
         Objects.requireNonNull(inINventory, "InInventory is null, to edit a product is need the last or new data with the same");
@@ -70,6 +70,7 @@ public class Shop extends AggregateEvent<ShopID> {
         Objects.requireNonNull(price, "Price is null, to edit a product is need the last or new data with the same");
 
         appendChange(new ProductEdited(
+            ShopID.of(shopID),
             IDProduct.of(productID),
             PName.of(name),
             InInventory.of(inINventory),

@@ -12,7 +12,7 @@ public class ShopUtils {
 
     public Product findProductById(IDProduct id, List<Product> products) {
         return products.stream()
-                .filter( product -> id.equals(product.getProductID()) )
+                .filter( product -> id.value().equals(product.getProductID().value()) )
                 .findFirst()
                 .orElse(null);
     }
