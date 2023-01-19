@@ -13,6 +13,7 @@ import java.util.Set;
 
 public class CreateShop extends Command {
 
+    private String shopID;
     private Set<Product> products;
 
 }

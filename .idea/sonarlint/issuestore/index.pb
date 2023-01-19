@@ -15,8 +15,6 @@ i
 9Domain/src/main/java/com/sofka/shop/values/ProductID.java,5\b\5bed9e6e4f940ebffad580758a0487f738931018
 e
 5Domain/src/main/java/com/sofka/shop/values/Price.java,a\a\aaecf45735b48ef608770433eb816033c843e1d2
-l
-<Domain/src/main/java/com/sofka/shop/commands/CreateShop.java,b\c\bc151f373adb183c90742bb45e5e9b325eb93008
 m
 =Domain/src/main/java/com/sofka/shop/commands/EditProduct.java,e\c\ec8f04337b233d1b124633b0de71f559db0265c4
 q
