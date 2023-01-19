@@ -15,13 +15,7 @@ i
 9Domain/src/main/java/com/sofka/shop/values/ProductID.java,5\b\5bed9e6e4f940ebffad580758a0487f738931018
 e
 5Domain/src/main/java/com/sofka/shop/values/Price.java,a\a\aaecf45735b48ef608770433eb816033c843e1d2
-m
-=Domain/src/main/java/com/sofka/shop/commands/EditProduct.java,e\c\ec8f04337b233d1b124633b0de71f559db0265c4
 q
 ADomain/src/main/java/com/sofka/shop/commands/RegisterProduct.java,f\3\f31c3d75783f6e64fea744021b608725e67ccf70
 f
 6Domain/src/main/java/com/sofka/shop/values/Enable.java,9\c\9cf2d09bfa30ac533ec6d5523369b88462a19461
-q
-ADomain/src/main/java/com/sofka/shop/utils/EncapsulateProduct.java,b\d\bd4523500f165b2017d1f9afe7b22b8d10c482a0
-m
-=Domain/src/main/java/com/sofka/shop/events/ProductEdited.java,e\b\eb34793970ed540c256be1f4c93228ff4ba5c3c5
