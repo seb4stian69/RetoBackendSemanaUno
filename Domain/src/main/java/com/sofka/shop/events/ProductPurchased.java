@@ -7,16 +7,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.util.HashMap;
 import java.util.Map;
 
 @Getter/* */@Setter
 public class ProductPurchased extends DomainEvent {
 
+    private String shopID;
     private Instant date;
     private String idType;
     private String id;
     private CName clientName;
-    private Map<IDProduct, Integer> products;
+    private Map<IDProduct, Integer> products = new HashMap<IDProduct, Integer>();
 
     public ProductPurchased(String idType, String id, CName clientName,Map<IDProduct, Integer> products){
         super("shop.productPurchased");

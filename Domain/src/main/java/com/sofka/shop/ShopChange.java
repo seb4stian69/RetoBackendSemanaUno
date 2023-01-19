@@ -10,6 +10,10 @@ public class ShopChange extends EventChange {
 
     public ShopChange(Shop shop) {
 
+        apply((ShopCreated event)->{
+           shop.products = event.getProducts();
+        });
+
         apply((ProductRegistered event) ->
             shop.products.add( event.getProduct() )
         );
@@ -33,6 +37,7 @@ public class ShopChange extends EventChange {
 
                 shop.utils.detectedProblems(idProduct, quantity, shop.products);
 
+                shop.utils.subtractProduct(idProduct, shop.products, quantity);
                 total.addAndGet(shop.utils.findProductById(idProduct,shop.products).getPrice().value() * quantity);
                 shop.productsPurchased.add(shop.utils.findProductById(idProduct,shop.products).getName().value());
 
