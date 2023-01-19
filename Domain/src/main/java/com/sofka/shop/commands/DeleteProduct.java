@@ -11,6 +11,7 @@ import lombok.Setter;
 
 public class DeleteProduct extends Command {
 
+    private String shopID;
     private String productId;
 
 }

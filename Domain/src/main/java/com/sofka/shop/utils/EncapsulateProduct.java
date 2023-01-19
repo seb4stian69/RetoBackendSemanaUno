@@ -15,7 +15,7 @@ public class EncapsulateProduct {
     private Min min;
     private Price price;
 
-    private EncapsulateProduct(PName productName, InInventory inInventory, Enable isEnabled, Max max, Min min, Price price) {
+    public EncapsulateProduct(ShopID shopID, IDProduct productID, PName productName, InInventory inInventory, Enable isEnabled, Max max, Min min, Price price) {
         this.productName = productName;
         this.inInventory = inInventory;
         this.isEnabled = isEnabled;
@@ -27,6 +27,8 @@ public class EncapsulateProduct {
     public static EncapsulateProduct productEditedNeeded(ProductEdited product){
 
         return new EncapsulateProduct(
+                product.getShopID(),
+                product.getProductID(),
                 product.getName(),
                 product.getInINventory(),
                 product.getEnabled(),
