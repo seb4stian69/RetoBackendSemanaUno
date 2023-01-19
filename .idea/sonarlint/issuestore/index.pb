@@ -15,8 +15,6 @@ i
 9Domain/src/main/java/com/sofka/shop/values/ProductID.java,5\b\5bed9e6e4f940ebffad580758a0487f738931018
 e
 5Domain/src/main/java/com/sofka/shop/values/Price.java,a\a\aaecf45735b48ef608770433eb816033c843e1d2
-q
-ADomain/src/main/java/com/sofka/shop/commands/RegisterProduct.java,f\3\f31c3d75783f6e64fea744021b608725e67ccf70
 o
 ?Domain/src/main/java/com/sofka/shop/commands/DeleteProduct.java,c\f\cf3631234870bffe9330ab4ae16abbdbacf44010
 n
