@@ -2,7 +2,7 @@ package com.sofka.shop.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.shop.entities.Product;
-import com.sofka.shop.values.*;
+import com.sofka.shop.values.ShopID;
 import lombok.Getter;
 import lombok.Setter;
 

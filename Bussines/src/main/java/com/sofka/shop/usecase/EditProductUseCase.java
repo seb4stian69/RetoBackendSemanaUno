@@ -3,18 +3,19 @@ package com.sofka.shop.usecase;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.shop.Shop;
 import com.sofka.shop.commands.EditProduct;
-import com.sofka.shop.entities.Product;
 import com.sofka.shop.gateway.ShopDomainEventRepository;
 import com.sofka.shop.generic.UseCaseForCommand;
 import com.sofka.shop.values.ShopID;
+import lombok.NoArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@NoArgsConstructor
 public class EditProductUseCase extends UseCaseForCommand<EditProduct> {
 
     // + ------------------------         Utils         ------------------------ + //
 
-    private final ShopDomainEventRepository repository;
+    private ShopDomainEventRepository repository;
 
     // + ------------------------      Constructor       ------------------------ + //
 
