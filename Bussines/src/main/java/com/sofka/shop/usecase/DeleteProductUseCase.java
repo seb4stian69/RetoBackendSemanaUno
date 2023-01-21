@@ -3,7 +3,6 @@ package com.sofka.shop.usecase;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.shop.Shop;
 import com.sofka.shop.commands.DeleteProduct;
-import com.sofka.shop.entities.Product;
 import com.sofka.shop.gateway.ShopDomainEventRepository;
 import com.sofka.shop.generic.UseCaseForCommand;
 import com.sofka.shop.values.ShopID;

@@ -1,5 +1,8 @@
 package com.sofka.shop;
 
+import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,6 +10,11 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Arrays;
 
@@ -16,18 +24,16 @@ import java.util.Arrays;
         useDefaultFilters = false, includeFilters = @ComponentScan.Filter
         (type = FilterType.REGEX, pattern = ".*UseCase")
 )
-@ComponentScan(value="com.sofka.shop.gateway",
-        useDefaultFilters = false, includeFilters = @ComponentScan.Filter
-        (type = FilterType.REGEX, pattern = ".*ListProductService")
-)
-@ComponentScan(value="com.sofka.shop.gateway",
-        useDefaultFilters = false, includeFilters = @ComponentScan.Filter
-        (type = FilterType.REGEX, pattern = ".*ShopDomainEventRepository")
-)
-
 public class ApplicationConfig {
 
     public static final String EXCHANGE = "core-shop";
+
+    @Bean
+    public RabbitAdmin rabbitAdmin(RabbitTemplate rabbitTemplate) {
+        var admin =  new RabbitAdmin(rabbitTemplate);
+        admin.declareExchange(new TopicExchange(EXCHANGE));
+        return admin;
+    }
 
     @Bean
     public CorsWebFilter corsWebFilter() {

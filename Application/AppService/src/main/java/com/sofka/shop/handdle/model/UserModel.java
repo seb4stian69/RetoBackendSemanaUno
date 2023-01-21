@@ -1,4 +1,4 @@
-package com.sofka.shop.Handdle.Model;
+package com.sofka.shop.handdle.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

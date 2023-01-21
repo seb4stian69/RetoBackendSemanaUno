@@ -13,6 +13,7 @@ import com.sofka.shop.values.UUID;
 import lombok.NoArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,7 +51,7 @@ public class BuyProductUseCase extends UseCaseForCommand<BuyProduct> {
 
                     var shop = Shop.from(ShopID.of(command.getShopID()),events);
 
-                    var uuid = command.getIdType()+"-"+command.getId();
+                    var uuid = command.getIdType()+"-"+command.getIdClient();
                     var completeName = command.getClientName().split(" ");
 
                     command.getProducts().forEach((productID,qty)->{

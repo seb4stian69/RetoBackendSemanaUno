@@ -9,7 +9,6 @@ import com.sofka.shop.values.ShopID;
 import lombok.NoArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-@NoArgsConstructor
 public class CreateShopUseCase extends UseCaseForCommand<CreateShop> {
 
     // + ------------------------         Utils         ------------------------ + //

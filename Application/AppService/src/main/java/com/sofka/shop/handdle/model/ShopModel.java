@@ -1,4 +1,4 @@
-package com.sofka.shop.Handdle.Model;
+package com.sofka.shop.handdle.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ShopModel {
 
-    private String shopid;
+    private String shopID;
     private List<String> products;
 
 }

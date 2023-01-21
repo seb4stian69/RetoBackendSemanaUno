@@ -14,6 +14,7 @@
         <module>Domain</module>
         <module>Bussines</module>
         <module>Application/AppService</module>
+        <module>Application/AppProxy</module>
     </modules>
 
     <properties>

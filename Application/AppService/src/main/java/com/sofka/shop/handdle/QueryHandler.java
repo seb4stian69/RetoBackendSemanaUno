@@ -1,26 +1,33 @@
-package com.sofka.shop.Handdle;
+package com.sofka.shop.handdle;
 
 
-import com.sofka.shop.Handdle.Model.BuyModel;
-import com.sofka.shop.Handdle.Model.ProductModel;
-import com.sofka.shop.Handdle.Model.ShopModel;
-import com.sofka.shop.Handdle.Model.UserModel;
+import com.sofka.shop.handdle.model.BuyModel;
+import com.sofka.shop.handdle.model.ProductModel;
+import com.sofka.shop.handdle.model.ShopModel;
+import com.sofka.shop.handdle.model.UserModel;
+import com.sofka.shop.needed.BuyProductN;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import java.util.logging.Logger;
+
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 
-@Configuration
+@Configuration@EnableSwagger2@RestController
 public class QueryHandler {
 
     // + ------------------------         Utils         ------------------------ + //
@@ -34,6 +41,7 @@ public class QueryHandler {
 
     // + ------------------------    Command actions     ------------------------ + //
 
+    @GetMapping("/users/list/{userID}")
     @Bean RouterFunction<ServerResponse> getUsers(){
         return RouterFunctions.route(GET("/users/list/{userID}"), request->
                 template.findOne( getUserByID(request.pathVariable("userID")), UserModel.class, "Users" )
@@ -45,6 +53,7 @@ public class QueryHandler {
         );
     }
 
+    @GetMapping("/shop/{shopID}")
     @Bean RouterFunction<ServerResponse> getShop(){
         return RouterFunctions.route(GET("/shop/{shopID}"), request->
                 template.findOne(getShopByID(request.pathVariable("shopID")), ShopModel.class, "Shops")
@@ -56,6 +65,7 @@ public class QueryHandler {
         );
     }
 
+    @GetMapping("/products")
     @Bean RouterFunction<ServerResponse> getProducts(){
         return RouterFunctions.route(GET("/products"), request->
             template.findAll( ProductModel.class, "Products" )
@@ -67,6 +77,7 @@ public class QueryHandler {
         );
     }
 
+    @GetMapping("/products/{productID}")
     @Bean RouterFunction<ServerResponse> getProductByID(){
         return RouterFunctions.route(GET("/products/{productID}"), request->
             template.findOne(getProductsByID(request.pathVariable("productID")),ProductModel.class, "Products")
@@ -78,6 +89,7 @@ public class QueryHandler {
         );
     }
 
+    @GetMapping("/buy/get")
     @Bean RouterFunction<ServerResponse> getBuys(){
         return RouterFunctions.route(GET("/buy/get"), request->
                 template.findAll( BuyModel.class, "Buys" )
@@ -89,6 +101,7 @@ public class QueryHandler {
         );
     }
 
+    @GetMapping("/buy/get/{userid}")
     @Bean RouterFunction<ServerResponse> getBuysByUser(){
         return RouterFunctions.route(GET("/buy/get/{userid}"), request->
                 template.find(getBuysByIDUser(request.pathVariable("userid")), BuyModel.class, "Buys")
@@ -108,21 +121,21 @@ public class QueryHandler {
         );
     }
 
-    private Query getShopByID(String shopID) {
+    public Query getShopByID(String shopID) {
         return new Query(
-                Criteria.where("shopid").is(shopID)
+                Criteria.where("shopID").is(shopID)
         );
     }
 
     private Query getProductsByID(String productID) {
         return new Query(
-                Criteria.where("productid").is(productID)
+                Criteria.where("productID").is(productID)
         );
     }
 
     private Query getBuysByIDUser(String userID) {
         return new Query(
-                Criteria.where("clientid").is(userID)
+                Criteria.where("idClient").is(userID)
         );
     }
 
