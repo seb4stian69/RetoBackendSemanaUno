@@ -43,7 +43,7 @@ class BuyProductUseCaseTest {
         var command = new BuyProduct();
         /* -> */ command.setShopID("shop_1");
         /* -> */ command.setIdType("CC");
-        /* -> */ command.setId("1104254557");
+        /* -> */ command.setIdClient("1104254557");
         /* -> */ command.setClientName("Sebastian Santis");
 
         productsPurchased.put("product1", 2); //20
