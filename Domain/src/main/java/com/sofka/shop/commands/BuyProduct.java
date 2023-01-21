@@ -1,7 +1,6 @@
 package com.sofka.shop.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.sofka.shop.values.IDProduct;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,14 +30,14 @@ public class BuyProduct extends Command {
     private String shopID;
     private Instant date;
     private String idType;
-    private String id;
+    private String idClient;
     private String clientName;
     private Map<String, Integer> products = new HashMap<String, Integer>();
 
     public BuyProduct(String idType, String id, String clientName, Map<String, Integer> products) {
         this.date = Instant.now();
         this.idType = idType;
-        this.id = id;
+        this.idClient = id;
         this.clientName = clientName;
         this.products = products;
     }

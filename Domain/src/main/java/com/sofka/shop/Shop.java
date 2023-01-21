@@ -6,12 +6,13 @@ import com.sofka.shop.entities.Product;
 import com.sofka.shop.events.*;
 import com.sofka.shop.utils.ShopUtils;
 import com.sofka.shop.values.*;
-import com.sofka.shop.values.UUID;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Getter/**/@Setter
 public class Shop extends AggregateEvent<ShopID> {

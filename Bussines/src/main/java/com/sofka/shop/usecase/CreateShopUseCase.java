@@ -6,14 +6,14 @@ import com.sofka.shop.commands.CreateShop;
 import com.sofka.shop.gateway.ListProductService;
 import com.sofka.shop.generic.UseCaseForCommand;
 import com.sofka.shop.values.ShopID;
+import lombok.NoArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 public class CreateShopUseCase extends UseCaseForCommand<CreateShop> {
 
     // + ------------------------         Utils         ------------------------ + //
 
-    private final ListProductService listProductService;
+    private ListProductService listProductService;
 
     // + ------------------------      Constructor       ------------------------ + //
 

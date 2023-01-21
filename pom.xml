@@ -7,14 +7,18 @@
     <groupId>org.example</groupId>
     <artifactId>RetoBackendSemanaUno</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <packaging>pom</packaging>
+
     <modules>
         <module>Domain</module>
         <module>Bussines</module>
-        <module>Application</module>
+        <module>Application/AppService</module>
+        <module>Application/AppProxy</module>
     </modules>
 
     <properties>
+        <springboot.version>2.5.4</springboot.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
