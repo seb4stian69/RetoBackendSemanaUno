@@ -7,14 +7,11 @@ import com.sofka.shop.gateway.ShopDomainEventRepository;
 import com.sofka.shop.generic.UseCaseForCommand;
 import com.sofka.shop.utils.ShopUtils;
 import com.sofka.shop.values.CName;
-import com.sofka.shop.values.IDProduct;
 import com.sofka.shop.values.ShopID;
 import com.sofka.shop.values.UUID;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Logger;
 
 public class BuyProductUseCase extends UseCaseForCommand<BuyProduct> {

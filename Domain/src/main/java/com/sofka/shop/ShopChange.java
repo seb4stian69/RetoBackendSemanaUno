@@ -4,6 +4,7 @@ import co.com.sofka.domain.generic.EventChange;
 import com.sofka.shop.events.*;
 import com.sofka.shop.utils.EncapsulateProduct;
 import com.sofka.shop.values.IDProduct;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ShopChange extends EventChange {

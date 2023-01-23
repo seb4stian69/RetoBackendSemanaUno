@@ -16,7 +16,6 @@ import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.logging.Logger;
 

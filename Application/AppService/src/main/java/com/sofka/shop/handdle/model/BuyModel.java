@@ -16,7 +16,7 @@ public class BuyModel {
     private String shopID;
     private Instant date;
     private String idType;
-    private String id;
+    private String idClient;
     private clientName clientName;
     private Map<String,Integer> productsPurchased;
 

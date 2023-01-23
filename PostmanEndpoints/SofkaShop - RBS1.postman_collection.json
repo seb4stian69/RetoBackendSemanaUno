@@ -42,7 +42,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"shopID\": \"shopThree\",\r\n    \"products\":[]\r\n}",
+							"raw": "{\r\n    \"shopID\": \"shopOne\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -95,14 +95,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8085/products",
+							"raw": "http://localhost:8085/products/shopOne",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8085",
 							"path": [
-								"products"
+								"products",
+								"shopOne"
 							]
 						}
 					},
@@ -144,7 +145,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8085/products/product1",
+							"raw": "http://localhost:8085/products/shopOne/product1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -152,6 +153,7 @@
 							"port": "8085",
 							"path": [
 								"products",
+								"shopOne",
 								"product1"
 							]
 						}
@@ -165,7 +167,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"shopID\": \"shopOne\",\r\n    \"productID\": \"product11\",\r\n    \"name\": \"Fifa\",\r\n    \"inINventory\": 150,\r\n    \"enabled\": true,\r\n    \"max\": 100,\r\n    \"min\": 1,\r\n    \"price\": 10\r\n}",
+							"raw": "{\r\n    \"shopID\": \"shopOne\",\r\n    \"productID\": \"product11\",\r\n    \"name\": \"Pescado frito\",\r\n    \"inINventory\": 150,\r\n    \"enabled\": true,\r\n    \"max\": 100,\r\n    \"min\": 1,\r\n    \"price\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -200,7 +202,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Peso\",\r\n    \"inINventory\": 150,\r\n    \"enabled\": true,\r\n    \"max\": 100,\r\n    \"min\": 1,\r\n    \"price\": 10\r\n}",
+							"raw": "{\r\n    \"shopID\": \"shopOne\",\r\n    \"productID\": \"product11\",\r\n    \"name\": \"Pescado carbonado\",\r\n    \"inINventory\": 150,\r\n    \"enabled\": true,\r\n    \"max\": 80,\r\n    \"min\": 1,\r\n    \"price\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -208,16 +210,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8085/Products/update/63cb379f29b9951f792c494f",
+							"raw": "http://localhost:8085/product/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8085",
 							"path": [
-								"Products",
-								"update",
-								"63cb379f29b9951f792c494f"
+								"product",
+								"update"
 							]
 						}
 					},
@@ -230,7 +231,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"shopID\": \"shopTwo\",\r\n    \"productID\": \"product1\",\r\n    \"name\": \"Ñame\",\r\n    \"inINventory\": 150,\r\n    \"enabled\": true,\r\n    \"max\": 100,\r\n    \"min\": 1,\r\n    \"price\": 10\r\n}",
+							"raw": "{\r\n    \"shopID\": \"shopOne\",\r\n    \"productId\": \"product11\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -238,17 +239,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8085/products/delete/shopOne/product11",
+							"raw": "http://localhost:8085/product/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8085",
 							"path": [
-								"products",
-								"delete",
-								"shopOne",
-								"product11"
+								"product",
+								"delete"
 							]
 						}
 					},
@@ -266,7 +265,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"shopID\":\"shopOne\",\r\n    \"idType\":\"CC\",\r\n    \"date\":\"000000\",\r\n    \"idClient\":\"1104254559\",\r\n    \"clientName\":\"Sebastian Santis\",\r\n    \"products\": {\r\n        \"63ca14b112c8440f934071cc\": 5\r\n    }\r\n}",
+							"raw": "{\r\n    \"shopID\":\"shopOne\",\r\n    \"date\":\"2023-01-21T05:47:29.886Z\",\r\n    \"idType\":\"CC\",\r\n    \"idClient\":\"1104254557\",\r\n    \"clientName\":\"Sebastian Santis\",\r\n    \"products\": {\r\n        \"product1\": 5,\r\n        \"product2\": 5\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -314,7 +313,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8085/buy/get/1104254558",
+							"raw": "http://localhost:8085/buy/get/1104254557",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -323,7 +322,7 @@
 							"path": [
 								"buy",
 								"get",
-								"1104254558"
+								"1104254557"
 							]
 						}
 					},
