@@ -26,9 +26,10 @@
 ## Pasos para ejecutar el proyecto
 1. Tener instalado docker y wsl.2
 2. En la commandLine de ubuntu on windows correr el siguiente comando docker pull rabbitmq
-3. Abrir el proyecto en intellij y actualizar las dependencias de maven para luego ejecutarlo
-4. Usar los endpoints que se encuentran en el apartado siguiente
-[Nota]: Swagger esta implementado pero solo funciona con algunos endpoints hasta el momento, para probar se recomiendo hacer uso de postman en el proyecto se encuentra el archivo con la coleccion necesario para realizar las pruebas
+3. Abrir docker y correr la imagen de rabbitmq habilitando el puerto 5672
+4. Abrir el proyecto en intellij y actualizar las dependencias de maven para luego ejecutarlo
+5. Usar los endpoints que se encuentran en el apartado siguiente
+- [Nota]: Swagger esta implementado pero solo funciona con algunos endpoints hasta el momento, para probar se recomiendo hacer uso de postman en el proyecto se encuentra el archivo con la coleccion necesario para realizar las pruebas
 
 ## Endpoints
 
