@@ -69,9 +69,9 @@ public class ShopMaterialize {
         dataInvoice.put("idClient", event.getId());
         dataInvoice.put("clientName", event.getClientName());
 
-        event.getProducts().forEach((productid,quantity) ->{
-            dataShop.inc(ATTRIBUTE_PRODUCTS+"."+productid+".inInventory.quantity", -quantity);
-        });
+        event.getProducts().forEach((productid,quantity) ->
+            dataShop.inc(ATTRIBUTE_PRODUCTS+"."+productid+".inInventory.quantity", -quantity)
+        );
 
         template.updateFirst(getFilterByAggregateId(event),dataShop, COLLECTION_VIEW).block();
         template.save(dataInvoice, COLLECTION_VIEW_TWO).block();
