@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8085/users/list/1104254557",
+							"raw": "http://localhost:8085/users/list/1234",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -24,7 +24,7 @@
 							"path": [
 								"users",
 								"list",
-								"1104254557"
+								"1234"
 							]
 						}
 					},
@@ -227,7 +227,7 @@
 				{
 					"name": "Delete products",
 					"request": {
-						"method": "DELETE",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",

@@ -5,7 +5,6 @@ import com.sofka.shop.usecase.*;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -16,7 +15,6 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration @AllArgsConstructor
 public class CommandHandler {
 
-    private final ReactiveMongoTemplate template;
     private final IntegrationHandle integrationHandle;
     private final ErrorHandler errorHandler;
 
@@ -48,7 +46,7 @@ public class CommandHandler {
     }
 
     @Bean RouterFunction<ServerResponse> deleteProduct(DeleteProductUseCase usecase){
-        return route(DELETE("/product/delete").and(accept(MediaType.APPLICATION_JSON)),
+        return route(POST("/product/delete").and(accept(MediaType.APPLICATION_JSON)),
                 request -> usecase.andThen(integrationHandle)
                         .apply(request.bodyToMono(DeleteProduct.class))
                         .then(ServerResponse.ok().build())
@@ -64,7 +62,5 @@ public class CommandHandler {
                         .onErrorResume(errorHandler::badRequest)
         );
     }
-
-    // + ------------------------     Query actions      ------------------------ + //
 
 }
