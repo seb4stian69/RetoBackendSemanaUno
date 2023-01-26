@@ -61,7 +61,7 @@ public class ShopMaterialize {
         var dataShop = new Update();
         var dataInvoice = new HashMap<>();
 
-        dataInvoice.put("_id", event.aggregateRootId());
+        dataInvoice.put("_id", SendID.cadenaAleatoria(35));
         dataInvoice.put("shopID", event.aggregateRootId());
         dataInvoice.put("productsPurchased", event.getProducts());
         dataInvoice.put("date",event.getDate());
